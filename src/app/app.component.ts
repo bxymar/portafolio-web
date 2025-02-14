@@ -1,12 +1,19 @@
 import { Component } from '@angular/core';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
 
 @Component({
   selector: 'app-root',
-  imports: [MatSlideToggleModule],
+  standalone: true,
+  imports: [SidebarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'portafolio-web';
+
+  activate: boolean = false;
+
+  onChange( value: boolean ) {
+    console.log( value );
+  }
+
 }
