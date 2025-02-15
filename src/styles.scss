@@ -1,8 +1,16 @@
 @use '@angular/material' as mat;
+@use 'app/styles_theme-colors.scss' as mut;
+
+@include mat.core();
 
 html {
+  color-scheme: light dark;
   @include mat.theme((
-    color: mat.$violet-palette,
+    color: (
+      primary: mut.$secundary-palette,
+      tertiary: mut.$tertiary-palette,
+      theme-type: dark,
+    ),
     typography: Montserrat,
     density: 0
   ));

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { FormsComponent } from './forms/forms.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [SidebarComponent],
+  imports: [FormsComponent, SidebarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -15,5 +16,4 @@ export class AppComponent {
   onChange( value: boolean ) {
     console.log( value );
   }
-
 }
