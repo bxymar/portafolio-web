@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { FormsComponent } from './forms/forms.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [FormsComponent, SidebarComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

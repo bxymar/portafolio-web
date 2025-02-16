@@ -1,9 +1,7 @@
-:host{
-    background: var(--mat-sys-primary-container);
+.example-spacer{
+    flex: 1 1 auto;
 }
 
-.mat-toolbar{
-    background: var(--mat-sys-primary-container);
-    border-radius: 20px;
-    margin-top: 20px;
+mat-toolbar{
+    padding: 0 100px;
 }

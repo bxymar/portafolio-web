@@ -1,3 +1,22 @@
 <mat-toolbar>
+    
     <span>Beymar</span>
+
+    <span class="example-spacer"></span>
+    @if (isMovile()){
+        @defer {
+            <button mat-icon-button>
+                <mat-icon>menu</mat-icon>
+            </button>
+        }
+    }
+    @else {
+        @defer {
+            <a mat-button routerLink="/home">Tecnologías</a>
+            <a mat-button routerLink="/home">Proyectos</a>
+            <a mat-button routerLink="/home">Logros</a>
+            <a mat-button routerLink="/home">Sobre Mi</a>
+        }
+    }
+
 </mat-toolbar>

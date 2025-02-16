@@ -1,0 +1,50 @@
+.container-app-presentation{
+    display: grid;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+.sp1, .sp2{
+    color: var(--mat-sys-on-primary-container);
+}
+
+.parent{
+    width: 600px;
+}
+
+.div1{
+    display: flex;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.div2{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.div3{
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.div4{
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.sp2{
+
+    font-weight: 700;
+}
+
+p{
+    color: #fafafa;
+}
+
+img{
+    width: 25px;
+    height: 25px;
+}

@@ -1,15 +1,12 @@
 @use '@angular/material' as mat;
 @use 'app/styles_theme-colors.scss' as mut;
 
-@include mat.core();
-
 html {
   color-scheme: light dark;
   @include mat.theme((
     color: (
-      primary: mut.$secundary-palette,
+      primary: mut.$primary-palette,
       tertiary: mut.$tertiary-palette,
-      theme-type: dark,
     ),
     typography: Montserrat,
     density: 0
@@ -25,6 +22,8 @@ html{
 
 body{
   margin: 0;
-  padding: 0 200px;
+  padding: 0;
   box-sizing: border-box;
 }
+
+@import "../public/scss/tooltip.scss";
