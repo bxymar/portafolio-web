@@ -1,5 +1,8 @@
 @use '@angular/material' as mat;
 @use 'app/styles_theme-colors.scss' as mut;
+@use '../public/scss/tooltip.scss' as tooltip;
+
+@include tooltip.tooltip-styles;
 
 html {
   color-scheme: light dark;
@@ -25,5 +28,3 @@ body{
   padding: 0;
   box-sizing: border-box;
 }
-
-@import "../public/scss/tooltip.scss";

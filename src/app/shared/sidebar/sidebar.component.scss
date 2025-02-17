@@ -2,6 +2,41 @@
     flex: 1 1 auto;
 }
 
+mat-sidenav{
+    div{
+        margin: 20px 0 0 0;
+    }
+}
+
+mat-toolbar, mat-sidenav{
+    border-bottom: 2px solid #fafafa10;
+    background: #fafafa10;
+    backdrop-filter: blur(0.4rem);
+    -webkit-backdrop-filter: blur(0.4rem);
+}
+
+mat-sidenav{
+    width: 100%;
+    padding-left: 100px;
+}
+
 mat-toolbar{
     padding: 0 100px;
+    height: 60px;
+}
+
+mat-sidenav-container{
+    width: auto;
+}
+
+//RESPONSIVE
+@media (max-width: 768px){
+    mat-toolbar{
+        padding: 0 0;
+    }
+
+    mat-sidenav{
+        padding-left: 0;
+        width: 200px;
+    }
 }

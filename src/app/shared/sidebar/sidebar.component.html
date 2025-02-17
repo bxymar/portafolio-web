@@ -1,22 +1,28 @@
 <mat-toolbar>
-    
+
     <span>Beymar</span>
 
     <span class="example-spacer"></span>
+
     @if (isMovile()){
-        @defer {
-            <button mat-icon-button>
-                <mat-icon>menu</mat-icon>
-            </button>
-        }
+        <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
     }
     @else {
-        @defer {
-            <a mat-button routerLink="/home">Tecnologías</a>
-            <a mat-button routerLink="/home">Proyectos</a>
-            <a mat-button routerLink="/home">Logros</a>
-            <a mat-button routerLink="/home">Sobre Mi</a>
-        }
+        <a mat-button routerLink="/home">Tecnologías</a>
+        <a mat-button routerLink="/home">Proyectos</a>
+        <a mat-button routerLink="/home">Logros</a>
+        <a mat-button routerLink="/home">Sobre Mi</a>
     }
 
 </mat-toolbar>
+
+@defer {
+    <mat-sidenav-container>
+        <mat-sidenav #sidenav [fixedInViewport]="true" [fixedTopGap]="60" mode="over">
+            <div><a>Tecnologías</a></div>
+            <div><a>Proyectos</a></div>
+            <div><a>Logros</a></div>
+            <div><a>Sobre Mi</a></div>
+        </mat-sidenav>
+    </mat-sidenav-container>
+}
