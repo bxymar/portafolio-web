@@ -14,6 +14,7 @@ import { AboutMeComponent } from '../../components/about-me/about-me.component';
 })
 export default class LayoutComponent {
 
+  @ViewChild('presentation') presentationSelection!: ElementRef;
   @ViewChild('tecnology') tecnologySelection!: ElementRef;
   @ViewChild('proyects') proyectsSelection!: ElementRef;
   @ViewChild('achievements') achievementsSelection!: ElementRef;
@@ -24,19 +25,27 @@ export default class LayoutComponent {
 
     switch(section){
 
+      //PRESENTACION
+      case 'presentation':
+        element = this.presentationSelection;
+        break;
+
       //TECNOLOGIAS
       case 'tecnology':
         element = this.tecnologySelection;
         break;
 
+      //PROYECTOS
       case 'proyects':
         element = this.proyectsSelection;
         break;
 
+      //LOGROS  
       case 'achievements':
         element = this.achievementsSelection;
         break;
 
+      //SOBRE MI
       case 'aboutMe':
         element = this.aboutMeSelection;
         break;
