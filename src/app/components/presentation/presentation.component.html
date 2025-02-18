@@ -1,12 +1,23 @@
 <div class="container-app-presentation">
     <div class="parent">
-        <div class="div1">Hola, <span class="sp1">{{name}}</span></div>
+        <div class="div1"><h1>Hola, {{name}}</h1></div>
         <div class="div2">{{description}}</div>
-        <div class="div3"><span class="sp2">{{achievements}}</span>, {{content}}</div>
+        <div class="div3"> <p>{{achievements}}, {{content}}</p></div>
         <div class="div4">
-            <button mat-flat-button matTooltip="Linkedin"><img src="icons/linkedin-light.png"></button>
-            <button mat-flat-button matTooltip="GitHub"><img src="icons/githubLight.png"></button>
-            <button mat-flat-button matTooltip="Correo Electrónico"><img src="icons/linkedin-light.png"></button>
+            @if (isMovile()){
+                @defer {
+                    <button class="btn-mvl" mat-flat-button>Linkedin</button>
+                    <button class="btn-mvl" mat-flat-button>GitHub</button>
+                    <button class="btn-mvl" mat-flat-button>Correo Electronico</button>
+                }
+            }
+            @else {
+                @defer {
+                    <button mat-flat-button matTooltip="Linkedin"><img src="icons/linkedin-light.png"></button>
+                    <button mat-flat-button matTooltip="GitHub"><img src="icons/githubLight.png"></button>
+                    <button mat-flat-button matTooltip="Correo Electrónico"><img src="icons/correo-electronico.png"></button>
+                }
+            }
         </div>
     </div>
 </div>

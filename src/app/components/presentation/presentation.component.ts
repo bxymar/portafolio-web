@@ -1,7 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { map } from 'rxjs';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-presentation',
@@ -11,10 +14,19 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 })
 export class PresentationComponent {
 
+  //VARIABLES
   protected name: string = "soy Beymar";
   protected description: string = "Software Developer";
   protected content: string = "transformando ideas en realidad a través de codigo y soluciones innovadoras";
   protected achievements: string = "Técnico en Sistemas Informáticos";
-  protected email: string = "beymar@gmail.com"
+  protected email: string = "beymar@gmail.com";
+  
+  private breatpointObserver = inject(BreakpointObserver);
+  private isMovile$ = this.breatpointObserver.observe(Breakpoints.Handset)
+    .pipe(
+      map(result => result.matches)
+    )
 
+  //CONVERTIR DE OBSERVABLE A SIGNAL
+    isMovile = toSignal(this.isMovile$, {initialValue: false});
 }

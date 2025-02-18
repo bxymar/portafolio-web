@@ -1,10 +1,30 @@
 <div class="container">
     
-    <div class="app-header">
-        <app-header />
+    <app-sidebar (sectionSelected)="srollToSection($event)"></app-sidebar>
+
+    <!-- PRESENTACION -->
+    <div class="app-presentation">
+        <app-presentation />
     </div>
-    <div class="app-tecnology">
+
+    <!-- TECNOLOGIA -->
+    <div #tecnology class="app-tecnology">
         <app-tecnology />
+    </div>
+
+    <!-- PROYECTOS -->
+    <div #proyects class="app-proyects">
+        <app-proyects />
+    </div>
+
+    <!-- LOGROS -->
+    <div #achievements class="app-achievements">
+        <app-achievements />
+    </div>
+
+    <!-- SOBRE MI -->
+    <div #aboutMe class="app-about-me">
+        <app-about-me />
     </div>
 
 </div>

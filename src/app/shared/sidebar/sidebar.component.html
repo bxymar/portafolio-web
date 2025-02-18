@@ -8,10 +8,10 @@
         <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
     }
     @else {
-        <a mat-button routerLink="/home">Tecnologías</a>
-        <a mat-button routerLink="/home">Proyectos</a>
-        <a mat-button routerLink="/home">Logros</a>
-        <a mat-button routerLink="/home">Sobre Mi</a>
+        <a (click)="navigateTo('tecnology')" mat-button>Tecnologías</a>
+        <a (click)="navigateTo('proyects')" mat-button>Proyectos</a>
+        <a (click)="navigateTo('achievements')" mat-button>Logros</a>
+        <a (click)="navigateTo('aboutMe')" mat-button>Sobre Mi</a>
     }
 
 </mat-toolbar>
@@ -19,10 +19,10 @@
 @defer {
     <mat-sidenav-container>
         <mat-sidenav #sidenav [fixedInViewport]="true" [fixedTopGap]="60" mode="over">
-            <div><a>Tecnologías</a></div>
-            <div><a>Proyectos</a></div>
-            <div><a>Logros</a></div>
-            <div><a>Sobre Mi</a></div>
+            <div><a (click)="navigateTo('tecnology')">Tecnologías</a></div>
+            <div><a (click)="navigateTo('proyects')">Proyectos</a></div>
+            <div><a (click)="navigateTo('achievements')">Logros</a></div>
+            <div><a (click)="navigateTo('aboutMe')">Sobre Mi</a></div>
         </mat-sidenav>
     </mat-sidenav-container>
 }

@@ -1,4 +1,4 @@
-import { Component, inject, ViewChild } from '@angular/core';
+import { Component, EventEmitter, inject, Output, ViewChild } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -26,4 +26,9 @@ export class SidebarComponent {
   isMovile = toSignal(this.isMovile$, {initialValue: false});
 
   @ViewChild('sidenav') sidenav!: MatSidenav;
+  @Output() sectionSelected = new EventEmitter<string>();
+
+  navigateTo(section: string){
+    this.sectionSelected.emit(section);
+  }
 }
