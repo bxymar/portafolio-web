@@ -1,48 +1,46 @@
 .container-tecnology{
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 .container-tecnology-internal{
-    display: flex;
-    flex-direction: column;
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
 }
 
 .tecnology-card{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    row-gap: 15px;
-    width: 600px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 330px 330px;
+    gap: 20px;
+}
 
-    .div1, .div2, .div3{
-        width: 250px;
-        height: 280px;
-        border: 2px solid #fafafa10;
-        backdrop-filter: blur(0.4rem);
-        -webkit-backdrop-filter: blur(0.4rem);
-        border-radius: 20px;
-        padding: 20px;
-        background: #fafafa10;
-        z-index: -1;
- 
-        .icons{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 15px;
-        }
-    }
+.div1, .div2, .div3{
+    border: 2px solid #fafafa10;
+    backdrop-filter: blur(0.4rem);
+    -webkit-backdrop-filter: blur(0.4rem);
+    border-radius: 20px;
+    padding: 20px;
+    background: #fafafa10;
+    z-index: -1;
+
+}
+
+.icons{
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    grid-template-rows: 90px 90px;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .img1{
     display: flex;
     flex-direction: column;
     align-items: center;
+    row-gap: 10px;
 }
 
 .title{
@@ -56,8 +54,9 @@
 }
 
 span{
-    font-size: 15px;
-    font-weight: 600;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
 }
 
 h3{
@@ -75,4 +74,32 @@ p{
 img{
     width: 50px;
     height: 50px;
+}
+
+//RESPONSIVE
+@media (max-width: 730px){
+    .tecnology-card{
+        grid-template-columns: minmax(100px, 2fr);
+        grid-template-rows: auto;
+    }
+
+    .div1{
+        height: auto;
+    }
+
+    .icons{
+        grid-template-columns: minmax(1fr, 1fr);  
+    }
+}
+
+@media (max-width: 315px){
+    .icons{
+        grid-template-columns: minmax(100px, 2fr);  
+    }
+}
+
+@media (max-width: 700px){
+    .container-tecnology{
+        padding: 0 10px;
+    }
 }

@@ -1,0 +1,25 @@
+.container-proyect{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.container-proyect-internal{
+    width: 100%;
+    max-width: 600px;
+}
+
+h3{
+    font-size: 27px;
+}
+
+p{
+    line-height: 26px;
+}
+
+@media (max-width: 700px){
+    .container-proyect{
+        padding: 0 10px;
+    }
+}
