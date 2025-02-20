@@ -1,8 +1,10 @@
 @use '@angular/material' as mat;
 @use 'app/styles_theme-colors.scss' as mut;
 @use '../public/scss/tooltip.scss' as tooltip;
+@use '../public/scss/button.scss' as button;
 
 @include tooltip.tooltip-styles;
+@include button.button-styles;
 
 html {
   color-scheme: light dark;

@@ -10,6 +10,61 @@
     max-width: 600px;
 }
 
+.proyects-card{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
+
+.card{
+    border: 2px solid #fafafa10;
+    backdrop-filter: blur(0.4rem);
+    -webkit-backdrop-filter: blur(0.4rem);
+    border-radius: 20px;
+    padding: 20px;
+    background: #fafafa10;
+
+    .title{
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .subtitle{
+        font-size: 15px;
+    }
+}
+
+.lenguages{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.img{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.type-proyect{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.display-proyect{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+img{
+    width: 100%;
+    border-radius: 20px;
+}
+
 h3{
     font-size: 27px;
 }

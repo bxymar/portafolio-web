@@ -13,6 +13,7 @@ mat-toolbar, mat-sidenav{
     background: #fafafa10;
     backdrop-filter: blur(0.4rem);
     -webkit-backdrop-filter: blur(0.4rem);
+    z-index: 1;
 }
 
 mat-sidenav{

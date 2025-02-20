@@ -1,0 +1,9 @@
+@mixin button-styles{
+    .mat-mdc-outlined-button.mat-mdc-button-disabled {
+        cursor: default;
+        color: #3f77bb !important;
+        border-color: #3f77bb !important;
+        background: #b2c9e5 !important;
+        font-weight: 500;
+    }
+}
