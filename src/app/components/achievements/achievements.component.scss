@@ -1,0 +1,101 @@
+.container-achievements{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.container-achievements-internal{
+    width: 100%;
+    max-width: 600px;
+}
+
+.achievements-card{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 200px 200px;
+    gap: 20px;
+}
+
+.card{
+    border: 2px solid #fafafa10;
+    backdrop-filter: blur(0.4rem);
+    -webkit-backdrop-filter: blur(0.4rem);
+    border-radius: 20px;
+    padding: 20px;
+    background: #fafafa10;
+    position: relative;
+
+
+    p{
+        position: absolute;
+        top: 10px;
+        color: #fafafa;
+        right: 25px;
+        font-size: 10px;
+        font-weight: 700;
+        opacity: 0;
+        transition: all 150ms ease;
+    }
+
+    button{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: all 150ms ease;
+        cursor: pointer;
+    }
+
+    h5{
+        font-size: 18px;
+        line-height: 24px;
+        bottom: -30px;
+        left: 0;
+        padding: 0 10px 10px 10px;
+        position: absolute;
+        opacity: 0;
+        text-align: center;
+    }
+}
+
+.card:hover{
+
+    p{
+        opacity: 1;
+    }
+
+    h5{
+        opacity: 1;
+    }
+
+    button{
+        opacity: 1;
+    }
+
+    img{
+        opacity: .1;
+    }
+}
+
+img{
+    width: 100%;
+    height: 155px;
+    transition: all 150ms ease;
+}
+
+h3{
+    font-size: 27px;
+}
+
+p{
+    line-height: 26px;
+}
+
+@media (max-width: 700px){
+    .container-achievements{
+        padding: 0 10px;
+    }
+}
