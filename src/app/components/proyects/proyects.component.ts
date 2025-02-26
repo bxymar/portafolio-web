@@ -16,7 +16,7 @@ export class ProyectsComponent {
 
   abrirModal(): void{
     const dialogRef = this.dialog.open(ProyectModalComponent, { 
-      
+
     })
   }
 }
