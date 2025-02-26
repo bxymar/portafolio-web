@@ -8,4 +8,24 @@
 .container-about-me-internal{
     width: 100%;
     max-width: 600px;
+
+    .img-icons{
+        display: flex;
+        justify-content: center;
+
+        img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+
+    }
+}
+
+h3{
+    font-size: 27px;
+}
+
+p{
+    line-height: 26px;
 }
