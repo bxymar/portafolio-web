@@ -3,21 +3,5 @@
         <div class="div1"><h1>Hola, {{name}}</h1></div>
         <div class="div2">{{description}}</div>
         <div class="div3"> <p>{{achievements}}, {{content}}</p></div>
-        <div class="div4">
-            @if (isMovile()){
-                @defer {
-                    <button class="btn-mvl" mat-flat-button>Linkedin</button>
-                    <button class="btn-mvl" mat-flat-button>GitHub</button>
-                    <button class="btn-mvl" mat-flat-button>Correo Electronico</button>
-                }
-            }
-            @else {
-                @defer {
-                    <button mat-flat-button matTooltip="Linkedin"><img src="icons/linkedin-light.png"></button>
-                    <button mat-flat-button matTooltip="GitHub"><img src="icons/githubLight.png"></button>
-                    <button mat-flat-button matTooltip="Correo Electrónico"><img src="icons/correo-electronico.png"></button>
-                }
-            }
-        </div>
     </div>
 </div>

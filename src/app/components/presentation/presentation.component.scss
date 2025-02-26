@@ -16,25 +16,23 @@
 .div1{
     h1{
         font-size: 60px;
+        color: rgba(200, 230, 215, 1);
     }
 }
 
 .div2{
     font-size: 25px;
     font-weight: 600;
+    color: rgba(50, 255, 150, 1);
 }
 
 .div3{
     margin-top: 50px;
     font-size: 20px;
-}
-
-.div4{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 25px;
-    z-index: -1;
+    
+    p{
+        color: #e5e8f0;
+    }
 }
 
 .sp2{

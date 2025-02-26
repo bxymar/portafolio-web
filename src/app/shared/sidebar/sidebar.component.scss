@@ -8,11 +8,21 @@ mat-sidenav{
     }
 }
 
+span{
+    color: rgba(200, 230, 215, 1);
+    font-weight: 500;
+    font-size: 28px;
+}
+
+a{
+    color: rgba(200, 230, 215, 1);
+    font-size: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
 mat-toolbar, mat-sidenav{
-    border-bottom: 2px solid #fafafa10;
-    background: #fafafa10;
-    backdrop-filter: blur(0.4rem);
-    -webkit-backdrop-filter: blur(0.4rem);
+    background: none;
     z-index: 1;
 }
 
@@ -24,7 +34,6 @@ mat-sidenav{
 mat-toolbar{
     padding: 0 100px;
     height: 60px;
-    position: fixed;
 }
 
 mat-sidenav-container{
