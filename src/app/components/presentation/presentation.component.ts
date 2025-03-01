@@ -13,13 +13,6 @@ import { toSignal } from '@angular/core/rxjs-interop';
   styleUrl: './presentation.component.scss'
 })
 export class PresentationComponent {
-
-  //VARIABLES
-  protected name: string = "soy Beymar";
-  protected description: string = "Software Developer";
-  protected content: string = "transformando ideas en realidad a través de codigo y soluciones innovadoras";
-  protected achievements: string = "Técnico en Sistemas Informáticos";
-  protected email: string = "beymar@gmail.com";
   
   private breatpointObserver = inject(BreakpointObserver);
   private isMovile$ = this.breatpointObserver.observe(Breakpoints.Handset)

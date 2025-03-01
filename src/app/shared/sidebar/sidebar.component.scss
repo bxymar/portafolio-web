@@ -1,5 +1,17 @@
-.example-spacer{
-    flex: 1 1 auto;
+.right-section{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+}
+
+mat-toolbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fafafa10;
+    border-bottom: 2px solid #fafafa10;
+    position: fixed;
+    backdrop-filter: blur(0.4rem);
 }
 
 mat-sidenav{
@@ -38,6 +50,11 @@ mat-toolbar{
 
 mat-sidenav-container{
     width: auto;
+}
+
+mat-icon{
+    color: rgba(226, 232, 240, 1);
+    cursor: pointer;
 }
 
 //RESPONSIVE

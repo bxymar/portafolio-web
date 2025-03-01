@@ -1,20 +1,29 @@
 <mat-toolbar>
 
-    <span>Beymar</span>
+    <div class="left-section">
+        <span>Beymar</span>
+    </div>
 
-    <span class="example-spacer"></span>
+    <div class="center-section">
+        @if (isMovile()){
+            <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
+        }
+        @else {
+            <a (click)="navigateTo('presentation')">INICIO</a>
+            <a (click)="navigateTo('experiencie')">EXPERIENCIA</a>
+            <a (click)="navigateTo('tecnology')">TECNOLOGÍAS</a>
+            <a (click)="navigateTo('proyects')">PROYECTOS</a>
+            <a (click)="navigateTo('achievements')">LOGROS</a>
+            <a (click)="navigateTo('aboutMe')">SOBRE MI</a>
+        }
+    </div>
 
-    @if (isMovile()){
-        <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
-    }
-    @else {
-        <a (click)="navigateTo('presentation')">INICIO</a>
-        <a (click)="navigateTo('experiencie')">EXPERIENCIA</a>
-        <a (click)="navigateTo('tecnology')">TECNOLOGÍAS</a>
-        <a (click)="navigateTo('proyects')">PROYECTOS</a>
-        <a (click)="navigateTo('achievements')">LOGROS</a>
-        <a (click)="navigateTo('aboutMe')">SOBRE MI</a>
-    }
+    <div class="right-section">
+        <mat-icon>code</mat-icon>
+        <mat-icon>person</mat-icon>
+        <mat-icon>start</mat-icon>
+    </div>
+
 
 </mat-toolbar>
 
