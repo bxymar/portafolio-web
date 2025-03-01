@@ -15,8 +15,23 @@ mat-toolbar{
 }
 
 mat-sidenav{
-    div{
-        margin: 20px 0 0 0;
+
+    display: flex;
+    min-width: 100%;
+    background: #fafafa10;
+    backdrop-filter: blur(0.4rem);
+
+    .menu{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        margin: 20px 0;
+    }
+    
+    .icons{
+        display: flex;
+        margin-left: 20px;
+        gap: 20px;
     }
 }
 
@@ -34,13 +49,7 @@ a{
 }
 
 mat-toolbar, mat-sidenav{
-    background: none;
     z-index: 1;
-}
-
-mat-sidenav{
-    width: 100%;
-    padding-left: 100px;
 }
 
 mat-toolbar{
@@ -48,9 +57,6 @@ mat-toolbar{
     height: 60px;
 }
 
-mat-sidenav-container{
-    width: auto;
-}
 
 mat-icon{
     color: rgba(226, 232, 240, 1);
@@ -60,11 +66,6 @@ mat-icon{
 //RESPONSIVE
 @media (max-width: 768px){
     mat-toolbar{
-        padding: 0 0;
-    }
-
-    mat-sidenav{
-        padding-left: 0;
-        width: 200px;
+        padding: 0 20px;
     }
 }

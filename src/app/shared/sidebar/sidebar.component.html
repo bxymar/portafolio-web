@@ -18,11 +18,14 @@
         }
     </div>
 
-    <div class="right-section">
-        <mat-icon>code</mat-icon>
-        <mat-icon>person</mat-icon>
-        <mat-icon>start</mat-icon>
-    </div>
+    @if (!isMovile()){
+        <div class="right-section">
+            <mat-icon>code</mat-icon>
+            <mat-icon>person</mat-icon>
+            <mat-icon>start</mat-icon>
+        </div>
+    }
+
 
 
 </mat-toolbar>
@@ -30,12 +33,22 @@
 @defer {
     <mat-sidenav-container>
         <mat-sidenav #sidenav [fixedInViewport]="true" [fixedTopGap]="60" mode="over">
-            <div><a (click)="navigateTo('presentation')">INICIO</a></div>
-            <div><a (click)="navigateTo('experiencie')">EXPERIENCIA</a></div>
-            <div><a (click)="navigateTo('tecnology')">TECNOLOGÍAS</a></div>
-            <div><a (click)="navigateTo('proyects')">PROYECTOS</a></div>
-            <div><a (click)="navigateTo('achievements')">LOGROS</a></div>
-            <div><a (click)="navigateTo('aboutMe')">SOBRE MI</a></div>
+
+            <div class="menu">
+                <div><a (click)="navigateTo('presentation')">INICIO</a></div>
+                <div><a (click)="navigateTo('experiencie')">EXPERIENCIA</a></div>
+                <div><a (click)="navigateTo('tecnology')">TECNOLOGÍAS</a></div>
+                <div><a (click)="navigateTo('proyects')">PROYECTOS</a></div>
+                <div><a (click)="navigateTo('achievements')">LOGROS</a></div>
+                <div><a (click)="navigateTo('aboutMe')">SOBRE MI</a></div>
+            </div>
+
+            <div class="icons">
+                <mat-icon>code</mat-icon>
+                <mat-icon>person</mat-icon>
+                <mat-icon>start</mat-icon>
+            </div>
+
         </mat-sidenav>
     </mat-sidenav-container>
 }
