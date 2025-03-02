@@ -19,16 +19,14 @@
 }
 
 .card{
-    border: 2px solid #fafafa10;
-    backdrop-filter: blur(0.4rem);
-    -webkit-backdrop-filter: blur(0.4rem);
     border-radius: 20px;
     padding: 20px;
-    background: #fafafa10;
+    background: rgba(15, 40, 30, 1);
 
     .title{
         font-size: 18px;
         font-weight: 600;
+        color: rgba(50, 255, 150, 1);;
     }
 
     .subtitle{
@@ -52,6 +50,17 @@
     position: absolute;
     top: 5px;
     left: 5px;
+
+    button{
+        background: #47556980;
+        border-radius: 20px;
+        color: rgba(226, 232, 240, 1);
+        border: none;
+        padding: 10px 15px;
+        font-family: "Onest", sans-serif;
+        font-weight: bold;
+    }
+
 }
 
 .display-proyect{
